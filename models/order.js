@@ -14,8 +14,8 @@ const orderSchema = new schema({
     name: { type: String, required: true },
     state:{ type: String, required: false, enum : ['pending','completed'],default: 'pending'
     },
-    user_id:{type:mongoose.Schema.Types.String,
-        ref:"users"
+    custmerer_id:{type:mongoose.Schema.Types.String,
+        ref:"customers"
         }
     
 
@@ -23,5 +23,5 @@ const orderSchema = new schema({
 
 
 
-const taskModel = mongoose.model("tasks", orderSchema);
+const taskModel = mongoose.model("orders", orderSchema);
 module.exports = orderModel;
